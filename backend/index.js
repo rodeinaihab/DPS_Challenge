@@ -1,8 +1,12 @@
 //express: framework for the backend
 const express = require("express");
+const cors = require("cors");
+
 // define app using express framework
 const app = express();
+app.use(cors());
 const routes = require("./routes");
+
 
 const  DatabaseController = require ( "./controllers/db");
 //Connect db
@@ -14,6 +18,8 @@ app.use(express.urlencoded({extended: true}));
 
 //use Routes
 app.use("/api", routes.api);
+
+
 
 const port = 4000;
 app.listen(port, () => console.log(`My project is working!!! ${port}`));

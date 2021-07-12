@@ -1,7 +1,7 @@
 // Where you can add new book(title of the book, author, published date)
 // Where you can see the list of all books and user can enter a search query into an input field.
-
 const mongoose = require("mongoose");
+const moment = require("moment");
 
 const BookSchema = new mongoose.Schema({
     title:{
@@ -13,8 +13,8 @@ const BookSchema = new mongoose.Schema({
         required: true,
     },
     publishedDate:{
-        type: Date,
-        default: Date.now,
+        type: String,
+        default: moment().format('MMMM Do YYYY, h:mm:ss a')
     },
 });
 
