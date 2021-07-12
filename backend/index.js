@@ -1,8 +1,11 @@
 //express: framework for the backend
 const express = require("express");
 const path = require("path")
+const cors = require("cors");
+
 // define app using express framework
 const app = express();
+app.use(cors());
 const routes = require("./routes");
 
 const  DatabaseController = require ( "./controllers/db");
