@@ -9,6 +9,8 @@
   "author": "Rodeina Mohamed",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
     "nodemon": "^2.0.12"
   }
 }
