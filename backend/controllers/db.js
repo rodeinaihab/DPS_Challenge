@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //connection to the DB
 //async func resolved with await keyword
-const uri = "mongodb+srv://admin:admin@bookfinder.bgsxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uri = process.env.MONGO_URI || "mongodb+srv://admin:admin@bookfinder.bgsxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const connect = async () => {
     try{
         await mongoose.connect(uri, {
