@@ -10,8 +10,8 @@
   "author": "Rodeina Mohamed",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^10.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.2",

@@ -11,6 +11,7 @@ const routes = require("./routes");
 const  DatabaseController = require ( "./controllers/db");
 //Connect db
 DatabaseController.connect();
+require("dotenv").config();
 
 //request and response apply json format
 app.use(express.json());
