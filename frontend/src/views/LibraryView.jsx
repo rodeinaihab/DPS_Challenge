@@ -13,7 +13,6 @@ export default function LibraryView(props) {
         })
             .catch(err => console.log(err))
     };
-
     useEffect(() => {
         getBooksFromBackend().then((data) => {
             setBooks(data)
@@ -24,7 +23,6 @@ export default function LibraryView(props) {
     return (
         <div>
             {books.length  && (<Table columnNames={TableColumns} submissions={books} />)}
-
         </div>
     );
 }

@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path")
 const cors = require("cors");
+require('dotenv').config()
 
 // define app using express framework
 const app = express();
@@ -17,13 +18,6 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-if (process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '../frontend/build')));
-}
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'../frontend/build/index.html'));
-})
 
 //use Routes
 app.use("/api", routes.api);
